@@ -5,7 +5,7 @@ const { places, descriptors } = require('./seedHelpers');
 
 mongoose.connect('mongodb://localhost:27017/yelp-camp', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        console.log("MONGO CONNECTION OPEN!!!")
+        console.log("DATABASE CONNECTION OPEN!!!")
     })
     .catch(err => {
         console.log("OH NO MONGO CONNECTION ERROR!!!!")
@@ -17,7 +17,7 @@ const sample = array => array[Math.floor(Math.random() * array.length)];
 //creating camps 
 const seedDB = async () => {
     await Campground.deleteMany({});
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 300; i++) {
         const random1000 = Math.floor(Math.random() * 1000);
         const price = Math.floor(Math.random() * 20) + 10;
         const camp = new Campground({
@@ -36,8 +36,8 @@ const seedDB = async () => {
             },
             images: [
                 {
-                  url: 'https://res.cloudinary.com/dskyhbpb2/image/upload/v1693425369/YelpCamp/ghana_lbapkn.avif',
-                  filename: 'YelpCamp/tghqdbujqeczirdjved8',
+                  url: 'https://res.cloudinary.com/dskyhbpb2/image/upload/v1693740795/YelpCamp/ovmuhbswy46n9if3nuc4.avif',
+                  filename: 'YelpCamp/ovmuhbswy46n9if3nuc4',
                 }
               ]
         })
