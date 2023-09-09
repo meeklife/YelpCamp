@@ -6,7 +6,7 @@ This project was created using Node.js, Express, MongoDB, and Bootstrap. Passpor
 
 # Functionalities
 
-- Everyone can view the camps and reviews without signing up or logging in.
+- Everyone can view the camps without signing up or logging in.
 
 - Users can create, edit, and remove campgrounds
 
