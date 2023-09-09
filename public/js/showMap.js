@@ -6,6 +6,8 @@ mapboxgl.accessToken = mapToken
         zoom: 10, // starting zoom
 });
 
+map.addControl(new mapboxgl.NavigationControl());
+
 const marker1 = new mapboxgl.Marker({ color: 'black', rotation: 45 })
 .setLngLat(campground.geometry.coordinates)
 .setPopup(

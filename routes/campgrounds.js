@@ -24,12 +24,7 @@ router.route('/')
         upload.array('image'),
         validateCampground,
         catchAsync(campgrounds.createCampgrounds));
-    // .post(upload.single('image'),(req,res)=>{
-    //     console.log(req.body, req.file)
-    //     res.send("IT IS WORKING")
-    // })
-
-
+    
 //Create campground get route
 router.get('/new', isLoggedIn, campgrounds.renderNewForm);
 
@@ -47,15 +42,11 @@ router.route('/:id')
         isAuthor, 
         catchAsync(campgrounds.deleteCampground));
 
-
 //Edit a campground get route
 router.get('/:id/edit', 
     isLoggedIn, 
     isAuthor, 
     catchAsync(campgrounds.renderEditForm));
-
-
-
 
 
 module.exports = router
